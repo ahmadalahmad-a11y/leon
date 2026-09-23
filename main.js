@@ -39,7 +39,10 @@ function initHeaderAndNav() {
 
   // Close menu when clicking outside
   document.addEventListener("click", (e) => {
-    if (mainNav.classList.contains("menu-open") && !mainNav.contains(e.target)) {
+    if (
+      mainNav.classList.contains("menu-open") &&
+      !mainNav.contains(e.target)
+    ) {
       closeMenu();
     }
   });
@@ -64,17 +67,17 @@ function initHeaderAndNav() {
   }
 
   // Sticky Header Effect on Scroll (Using Passive Event Listener)
-  let lastScrollY = window.scrollY;
+  let scrollFrame = null;
   const updateHeaderScroll = () => {
-    console.log(lastScrollY)
-    if (window.scrollY > 40) {
-      header.classList.add("header-scrolled");
-    } else {
-      header.classList.remove("header-scrolled");
-    }
+    if (scrollFrame !== null) return;
+
+    scrollFrame = window.requestAnimationFrame(() => {
+      header.classList.toggle("header-scrolled", window.scrollY > 40);
+      scrollFrame = null;
+    });
   };
 
-  window.addEventListener("scroll", updateHeaderScroll , { passive: true });
+  window.addEventListener("scroll", updateHeaderScroll, { passive: true });
   updateHeaderScroll();
 }
 
@@ -98,20 +101,20 @@ function initLandingSlider() {
       image: "imgs/landing.jpg",
       badge: "Creative Agency",
       title: "Hello There",
-      desc: "We are Leon - Super Creative & Minimal Agency Web Template"
+      desc: "We are Leon - Super Creative & Minimal Agency Web Template",
     },
     {
       image: "imgs/about.jpg",
       badge: "Digital Excellence",
       title: "We Create Impact",
-      desc: "Transforming ambitious ideas into seamless, memorable digital realities"
+      desc: "Transforming ambitious ideas into seamless, memorable digital realities",
     },
     {
       image: "imgs/services.jpg",
       badge: "Modern Solutions",
       title: "Built to Scale",
-      desc: "Disciplined design architecture paired with elite engineering power"
-    }
+      desc: "Disciplined design architecture paired with elite engineering power",
+    },
   ];
 
   let currentIndex = 0;
@@ -207,7 +210,7 @@ function initLandingSlider() {
     (e) => {
       touchStartX = e.changedTouches[0].screenX;
     },
-    { passive: true }
+    { passive: true },
   );
 
   landingSection.addEventListener(
@@ -216,7 +219,7 @@ function initLandingSlider() {
       touchEndX = e.changedTouches[0].screenX;
       handleSwipe();
     },
-    { passive: true }
+    { passive: true },
   );
 
   function handleSwipe() {
@@ -239,7 +242,9 @@ function initLandingSlider() {
    3. Portfolio Filtering (تصفية معرض الأعمال بأنيميشن ناعم)
    -------------------------------------------------------------------------- */
 function initPortfolioFilter() {
-  const filterButtons = document.querySelectorAll(".portfolio-filters .filter-button");
+  const filterButtons = document.querySelectorAll(
+    ".portfolio-filters .filter-button",
+  );
   const cards = document.querySelectorAll(".portfolio-content .card");
 
   if (!filterButtons.length || !cards.length) return;
@@ -293,7 +298,8 @@ function initPortfolioLightbox() {
 
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      const imgSrc = card.dataset.img || card.querySelector("img").getAttribute("src");
+      const imgSrc =
+        card.dataset.img || card.querySelector("img").getAttribute("src");
       const title = card.dataset.title || card.querySelector("h3").textContent;
 
       lightboxImg.src = imgSrc;
@@ -341,7 +347,7 @@ function initScrollAnimations() {
 
   const observerOptions = {
     threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
+    rootMargin: "0px 0px -50px 0px",
   };
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -385,9 +391,12 @@ function initStatsAndSkillsCounters() {
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       // easeOutQuad equation
       const easeProgress = 1 - (1 - progress) * (1 - progress);
-      const currentValue = Math.floor(easeProgress * (target - startValue) + startValue);
+      const currentValue = Math.floor(
+        easeProgress * (target - startValue) + startValue,
+      );
 
-      el.textContent = currentValue.toLocaleString() + (target >= 1000 ? "+" : "");
+      el.textContent =
+        currentValue.toLocaleString() + (target >= 1000 ? "+" : "");
 
       if (progress < 1) {
         window.requestAnimationFrame(step);
@@ -415,7 +424,7 @@ function initStatsAndSkillsCounters() {
           }
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0.25 },
     );
 
     statsObserver.observe(statsSection);
@@ -428,7 +437,8 @@ function initStatsAndSkillsCounters() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const progressBars = entry.target.querySelectorAll(".progress-bar");
-            const percentLabels = entry.target.querySelectorAll(".skill-percent");
+            const percentLabels =
+              entry.target.querySelectorAll(".skill-percent");
 
             progressBars.forEach((bar) => {
               const targetWidth = bar.dataset.width;
@@ -451,7 +461,7 @@ function initStatsAndSkillsCounters() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     skillsObserver.observe(skillsProgress);
@@ -476,11 +486,12 @@ function initSmoothScrollAndScrollSpy() {
         e.preventDefault();
         const headerOffset = 70;
         const elementPosition = targetSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       }
     });
@@ -491,7 +502,7 @@ function initSmoothScrollAndScrollSpy() {
     const spyOptions = {
       root: null,
       rootMargin: "-20% 0px -70% 0px",
-      threshold: 0
+      threshold: 0,
     };
 
     const spyObserver = new IntersectionObserver((entries) => {
@@ -535,7 +546,7 @@ function initBackToTop() {
   backToTopBtn.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 }

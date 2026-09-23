@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leon template</title>
+    <link
+      rel="preload"
+      as="image"
+      href="imgs/landing.jpg"
+      fetchpriority="high"
+    />
     <!-- Main Template CSS File -->
     <link rel="stylesheet" href="css/leon.css" />
     <!-- Vanilla JavaScript File -->
@@ -16,393 +21,610 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Start Header -->
     <header class="header" id="header">
-        <div class="container">
-            <a href="#" class="logo-link" aria-label="Leon Agency Home">
-                <img fetchpriority="high" class="logo" src="imgs/logo.png" alt="Leon Agency Logo" />
-            </a>
-            <nav class="links" id="main-nav" aria-label="Main Navigation">
-                <button class=" icon" id="burger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul id="nav-list">
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#stats" class="nav-link">Stats</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <a href="#" class="logo-link" aria-label="Leon Agency Home">
+          <img
+            fetchpriority="high"
+            class="logo"
+            src="imgs/logo.png"
+            alt="Leon Agency Logo"
+          />
+        </a>
+        <nav class="links" id="main-nav" aria-label="Main Navigation">
+          <button
+            class="icon"
+            id="burger-btn"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-list"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul id="nav-list">
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#stats" class="nav-link">Stats</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- End Header -->
 
     <!-- Start Landing Section -->
     <section class="landing" id="landing">
-        <div class="landing-overlay"></div>
-        <div class="intro-text">
-            <span class="badge">Creative Agency</span>
-            <h1 id="landing-title">Hello There</h1>
-            <p id="landing-desc">We are Leon - Super Creative & Minimal Agency Web Template</p>
-            <div class="landing-cta">
-                <a href="#portfolio" class="btn-primary">Our Work</a>
-                <a href="#contact" class="btn-secondary">Get In Touch</a>
-            </div>
+      <div class="landing-overlay"></div>
+      <div class="intro-text">
+        <span class="badge">Creative Agency</span>
+        <h1 id="landing-title">Hello There</h1>
+        <p id="landing-desc">
+          We are Leon - Super Creative & Minimal Agency Web Template
+        </p>
+        <div class="landing-cta">
+          <a href="#portfolio" class="btn-primary">Our Work</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
         </div>
-        
-        <!-- Slider Controls -->
-        <div class="slider-controls">
-            <button class="slider-btn prev-btn" id="prev-slide" aria-label="Previous Slide">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="slider-btn next-btn" id="next-slide" aria-label="Next Slide">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
+      </div>
 
-        <!-- Slider Dots/Bullets -->
-        <div class="slider-bullets" id="slider-bullets">
-            <button class="bullet is-active" data-index="0" aria-label="Go to slide 1"></button>
-            <button class="bullet" data-index="1" aria-label="Go to slide 2"></button>
-            <button class="bullet" data-index="2" aria-label="Go to slide 3"></button>
-        </div>
+      <!-- Slider Controls -->
+      <div class="slider-controls">
+        <button
+          class="slider-btn prev-btn"
+          id="prev-slide"
+          aria-label="Previous Slide"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button
+          class="slider-btn next-btn"
+          id="next-slide"
+          aria-label="Next Slide"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Slider Dots/Bullets -->
+      <div class="slider-bullets" id="slider-bullets">
+        <button
+          class="bullet is-active"
+          data-index="0"
+          aria-label="Go to slide 1"
+        ></button>
+        <button
+          class="bullet"
+          data-index="1"
+          aria-label="Go to slide 2"
+        ></button>
+        <button
+          class="bullet"
+          data-index="2"
+          aria-label="Go to slide 3"
+        ></button>
+      </div>
     </section>
     <!-- End Landing Section -->
 
     <!-- Start Features -->
     <section class="features" id="features">
-        <div class="container grid-3">
-            <div class="feat reveal-on-scroll" data-delay="0">
-                <div class="icon-wrap">
-                    <i class="fas fa-magic fa-3x"></i>
-                </div>
-                <h3>Tell Us Your Idea</h3>
-                <p>We craft tailored creative solutions designed specifically to breathe life and vitality into your boldest ambitions.</p>
-            </div>
-            <div class="feat reveal-on-scroll" data-delay="150">
-                <div class="icon-wrap">
-                    <i class="far fa-gem fa-3x"></i>
-                </div>
-                <h3>We Will Do All The Work</h3>
-                <p>From strategic planning to final pixel-perfect execution, our elite team handles every nuance seamlessly.</p>
-            </div>
-            <div class="feat reveal-on-scroll" data-delay="300">
-                <div class="icon-wrap">
-                    <i class="fas fa-globe-asia fa-3x"></i>
-                </div>
-                <h3>Your Product is Worldwide</h3>
-                <p>Global standards, modern performance, and scalable digital architectures that reach audiences everywhere.</p>
-            </div>
+      <div class="container grid-3">
+        <div class="feat reveal-on-scroll" data-delay="0">
+          <div class="icon-wrap">
+            <i class="fas fa-magic fa-3x"></i>
+          </div>
+          <h3>Tell Us Your Idea</h3>
+          <p>
+            We craft tailored creative solutions designed specifically to
+            breathe life and vitality into your boldest ambitions.
+          </p>
         </div>
+        <div class="feat reveal-on-scroll" data-delay="150">
+          <div class="icon-wrap">
+            <i class="far fa-gem fa-3x"></i>
+          </div>
+          <h3>We Will Do All The Work</h3>
+          <p>
+            From strategic planning to final pixel-perfect execution, our elite
+            team handles every nuance seamlessly.
+          </p>
+        </div>
+        <div class="feat reveal-on-scroll" data-delay="300">
+          <div class="icon-wrap">
+            <i class="fas fa-globe-asia fa-3x"></i>
+          </div>
+          <h3>Your Product is Worldwide</h3>
+          <p>
+            Global standards, modern performance, and scalable digital
+            architectures that reach audiences everywhere.
+          </p>
+        </div>
+      </div>
     </section>
     <!-- End Features -->
 
     <!-- Start Services -->
     <section class="services" id="services">
-        <div class="container">
-            <h2 class="special-heading reveal-on-scroll">Services</h2>
-            <p class="special-subheading reveal-on-scroll">Don't be busy, be productive</p>
-            <div class="services-content">
-                <div class="col">
-                    <!-- Start Service -->
-                    <div class="srv reveal-on-scroll" data-delay="0">
-                        <i class="fas fa-palette fa-2x"></i>
-                        <div class="text">
-                            <h3>Graphic Design</h3>
-                            <p>
-                                Graphic design is the process of visual communication and problem-solving using one or
-                                more of typography, photography and illustration.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="srv reveal-on-scroll" data-delay="150">
-                        <i class="fab fa-sketch fa-2x"></i>
-                        <div class="text">
-                            <h3>UI & UX Design</h3>
-                            <p>
-                                Process of enhancing user satisfaction with a product by improving the usability,
-                                accessibility, and pleasure provided in the interaction.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Service -->
-                </div>
-                <div class="col">
-                    <!-- Start Services -->
-                    <div class="srv reveal-on-scroll" data-delay="100">
-                        <i class="fas fa-vector-square fa-2x"></i>
-                        <div class="text">
-                            <h3>Web Design</h3>
-                            <p>
-                                Web design encompasses many different skills and disciplines in the production and
-                                maintenance of modern digital experiences.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="srv reveal-on-scroll" data-delay="250">
-                        <i class="fas fa-pencil-ruler fa-2x"></i>
-                        <div class="text">
-                            <h3>Web Development</h3>
-                            <p>
-                                Web development is a broad term for the work involved in developing performant, scalable,
-                                and dynamic web systems.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Services -->
-                </div>
-                <div class="col">
-                    <div class="image image-column reveal-on-scroll" data-delay="200">
-                        <img decoding="async" src="imgs/services.jpg" alt="Leon Services Showcase" />
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="special-heading reveal-on-scroll">Services</h2>
+        <p class="special-subheading reveal-on-scroll">
+          Don't be busy, be productive
+        </p>
+        <div class="services-content">
+          <div class="col">
+            <!-- Start Service -->
+            <div class="srv reveal-on-scroll" data-delay="0">
+              <i class="fas fa-palette fa-2x"></i>
+              <div class="text">
+                <h3>Graphic Design</h3>
+                <p>
+                  Graphic design is the process of visual communication and
+                  problem-solving using one or more of typography, photography
+                  and illustration.
+                </p>
+              </div>
             </div>
+            <div class="srv reveal-on-scroll" data-delay="150">
+              <i class="fab fa-sketch fa-2x"></i>
+              <div class="text">
+                <h3>UI & UX Design</h3>
+                <p>
+                  Process of enhancing user satisfaction with a product by
+                  improving the usability, accessibility, and pleasure provided
+                  in the interaction.
+                </p>
+              </div>
+            </div>
+            <!-- End Service -->
+          </div>
+          <div class="col">
+            <!-- Start Services -->
+            <div class="srv reveal-on-scroll" data-delay="100">
+              <i class="fas fa-vector-square fa-2x"></i>
+              <div class="text">
+                <h3>Web Design</h3>
+                <p>
+                  Web design encompasses many different skills and disciplines
+                  in the production and maintenance of modern digital
+                  experiences.
+                </p>
+              </div>
+            </div>
+            <div class="srv reveal-on-scroll" data-delay="250">
+              <i class="fas fa-pencil-ruler fa-2x"></i>
+              <div class="text">
+                <h3>Web Development</h3>
+                <p>
+                  Web development is a broad term for the work involved in
+                  developing performant, scalable, and dynamic web systems.
+                </p>
+              </div>
+            </div>
+            <!-- End Services -->
+          </div>
+          <div class="col">
+            <div class="image image-column reveal-on-scroll" data-delay="200">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="imgs/services.jpg"
+                alt="Leon Services Showcase"
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Services -->
 
     <!-- Start Portfolio -->
     <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="special-heading reveal-on-scroll">Portfolio</h2>
-            <p class="special-subheading reveal-on-scroll">If you do it right, it will last forever.</p>
-            
-            <!-- Portfolio Filter Buttons -->
-            <div class="portfolio-filters reveal-on-scroll" role="tablist" aria-label="Portfolio filters">
-                <button class="filter-button is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-                <button class="filter-button" data-filter="app" role="tab" aria-selected="false">App</button>
-                <button class="filter-button" data-filter="photo" role="tab" aria-selected="false">Photo</button>
-                <button class="filter-button" data-filter="web" role="tab" aria-selected="false">Web</button>
-            </div>
+      <div class="container">
+        <h2 class="special-heading reveal-on-scroll">Portfolio</h2>
+        <p class="special-subheading reveal-on-scroll">
+          If you do it right, it will last forever.
+        </p>
 
-            <!-- Portfolio Cards Grid -->
-            <div class="portfolio-content" id="portfolio-grid">
-                <div class="card reveal-on-scroll" data-category="web" data-title="Modern Web Dashboard" data-img="imgs/portfolio-1.jpg">
-                    <div class="card-img-wrapper">
-                        <img decoding="async" src="imgs/portfolio-1.jpg" alt="Modern Web App Project" />
-                        <div class="card-overlay">
-                            <span class="preview-btn"><i class="fas fa-search-plus"></i> View Project</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <span class="category-badge">Web Design</span>
-                        <h3>Modern Dashboard System</h3>
-                        <p>A full responsive digital platform designed for high conversion and optimal usability.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal-on-scroll" data-category="app" data-delay="100" data-title="Fintech Mobile App" data-img="imgs/portfolio-2.jpg">
-                    <div class="card-img-wrapper">
-                        <img decoding="async" src="imgs/portfolio-2.jpg" alt="Mobile Fintech App" />
-                        <div class="card-overlay">
-                            <span class="preview-btn"><i class="fas fa-search-plus"></i> View Project</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <span class="category-badge">Mobile App</span>
-                        <h3>Fintech Mobile Experience</h3>
-                        <p>Streamlined financial management application with frictionless user journey.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal-on-scroll" data-category="photo" data-delay="200" data-title="Brand Studio Photography" data-img="imgs/portfolio-3.jpg">
-                    <div class="card-img-wrapper">
-                        <img decoding="async" src="imgs/portfolio-3.jpg" alt="Commercial Photography" />
-                        <div class="card-overlay">
-                            <span class="preview-btn"><i class="fas fa-search-plus"></i> View Project</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <span class="category-badge">Photography</span>
-                        <h3>Brand Identity & Visuals</h3>
-                        <p>Captivating visual identity and photography that tells a rich brand story.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal-on-scroll" data-category="app" data-delay="100" data-title="Social Media Platform" data-img="imgs/portfolio-1.jpg">
-                    <div class="card-img-wrapper">
-                        <img decoding="async" src="imgs/portfolio-1.jpg" alt="Social Media App" />
-                        <div class="card-overlay">
-                            <span class="preview-btn"><i class="fas fa-search-plus"></i> View Project</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <span class="category-badge">Mobile App</span>
-                        <h3>Social Community App</h3>
-                        <p>Interactive community platform with real-time communications and sharing.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal-on-scroll" data-category="web" data-delay="200" data-title="Luxury Brand E-Store" data-img="imgs/portfolio-2.jpg">
-                    <div class="card-img-wrapper">
-                        <img decoding="async" src="imgs/portfolio-2.jpg" alt="E-Commerce Architecture" />
-                        <div class="card-overlay">
-                            <span class="preview-btn"><i class="fas fa-search-plus"></i> View Project</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <span class="category-badge">Web Development</span>
-                        <h3>Luxury Brand E-Store</h3>
-                        <p>High-end e-commerce store with smooth checkout flow and responsive layouts.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal-on-scroll" data-category="photo" data-delay="300" data-title="Architectural Angles" data-img="imgs/portfolio-3.jpg">
-                    <div class="card-img-wrapper">
-                        <img decoding="async" src="imgs/portfolio-3.jpg" alt="Architectural Photo" />
-                        <div class="card-overlay">
-                            <span class="preview-btn"><i class="fas fa-search-plus"></i> View Project</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <span class="category-badge">Photography</span>
-                        <h3>Geometric Perspectives</h3>
-                        <p>Urban architectural photography capturing minimal shapes and light textures.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Portfolio Filter Buttons -->
+        <div
+          class="portfolio-filters reveal-on-scroll"
+          role="tablist"
+          aria-label="Portfolio filters"
+        >
+          <button
+            class="filter-button is-active"
+            data-filter="all"
+            role="tab"
+            aria-selected="true"
+          >
+            All
+          </button>
+          <button
+            class="filter-button"
+            data-filter="app"
+            role="tab"
+            aria-selected="false"
+          >
+            App
+          </button>
+          <button
+            class="filter-button"
+            data-filter="photo"
+            role="tab"
+            aria-selected="false"
+          >
+            Photo
+          </button>
+          <button
+            class="filter-button"
+            data-filter="web"
+            role="tab"
+            aria-selected="false"
+          >
+            Web
+          </button>
         </div>
+
+        <!-- Portfolio Cards Grid -->
+        <div class="portfolio-content" id="portfolio-grid">
+          <div
+            class="card reveal-on-scroll"
+            data-category="web"
+            data-title="Modern Web Dashboard"
+            data-img="imgs/portfolio-1.jpg"
+          >
+            <div class="card-img-wrapper">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="imgs/portfolio-1.jpg"
+                alt="Modern Web App Project"
+              />
+              <div class="card-overlay">
+                <span class="preview-btn"
+                  ><i class="fas fa-search-plus"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="info">
+              <span class="category-badge">Web Design</span>
+              <h3>Modern Dashboard System</h3>
+              <p>
+                A full responsive digital platform designed for high conversion
+                and optimal usability.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card reveal-on-scroll"
+            data-category="app"
+            data-delay="100"
+            data-title="Fintech Mobile App"
+            data-img="imgs/portfolio-2.jpg"
+          >
+            <div class="card-img-wrapper">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="imgs/portfolio-2.jpg"
+                alt="Mobile Fintech App"
+              />
+              <div class="card-overlay">
+                <span class="preview-btn"
+                  ><i class="fas fa-search-plus"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="info">
+              <span class="category-badge">Mobile App</span>
+              <h3>Fintech Mobile Experience</h3>
+              <p>
+                Streamlined financial management application with frictionless
+                user journey.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card reveal-on-scroll"
+            data-category="photo"
+            data-delay="200"
+            data-title="Brand Studio Photography"
+            data-img="imgs/portfolio-3.jpg"
+          >
+            <div class="card-img-wrapper">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="imgs/portfolio-3.jpg"
+                alt="Commercial Photography"
+              />
+              <div class="card-overlay">
+                <span class="preview-btn"
+                  ><i class="fas fa-search-plus"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="info">
+              <span class="category-badge">Photography</span>
+              <h3>Brand Identity & Visuals</h3>
+              <p>
+                Captivating visual identity and photography that tells a rich
+                brand story.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card reveal-on-scroll"
+            data-category="app"
+            data-delay="100"
+            data-title="Social Media Platform"
+            data-img="imgs/portfolio-1.jpg"
+          >
+            <div class="card-img-wrapper">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="imgs/portfolio-1.jpg"
+                alt="Social Media App"
+              />
+              <div class="card-overlay">
+                <span class="preview-btn"
+                  ><i class="fas fa-search-plus"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="info">
+              <span class="category-badge">Mobile App</span>
+              <h3>Social Community App</h3>
+              <p>
+                Interactive community platform with real-time communications and
+                sharing.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card reveal-on-scroll"
+            data-category="web"
+            data-delay="200"
+            data-title="Luxury Brand E-Store"
+            data-img="imgs/portfolio-2.jpg"
+          >
+            <div class="card-img-wrapper">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="imgs/portfolio-2.jpg"
+                alt="E-Commerce Architecture"
+              />
+              <div class="card-overlay">
+                <span class="preview-btn"
+                  ><i class="fas fa-search-plus"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="info">
+              <span class="category-badge">Web Development</span>
+              <h3>Luxury Brand E-Store</h3>
+              <p>
+                High-end e-commerce store with smooth checkout flow and
+                responsive layouts.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card reveal-on-scroll"
+            data-category="photo"
+            data-delay="300"
+            data-title="Architectural Angles"
+            data-img="imgs/portfolio-3.jpg"
+          >
+            <div class="card-img-wrapper">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="imgs/portfolio-3.jpg"
+                alt="Architectural Photo"
+              />
+              <div class="card-overlay">
+                <span class="preview-btn"
+                  ><i class="fas fa-search-plus"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="info">
+              <span class="category-badge">Photography</span>
+              <h3>Geometric Perspectives</h3>
+              <p>
+                Urban architectural photography capturing minimal shapes and
+                light textures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- End Portfolio -->
 
     <!-- Start About -->
     <section class="about" id="about">
-        <div class="container">
-            <h2 class="special-heading reveal-on-scroll">About</h2>
-            <p class="special-subheading reveal-on-scroll">Less is more work</p>
-            <div class="about-content">
-                <div class="image reveal-on-scroll" data-delay="0">
-                    <img decoding="async" src="imgs/about.jpg" alt="About Leon Agency" />
+      <div class="container">
+        <h2 class="special-heading reveal-on-scroll">About</h2>
+        <p class="special-subheading reveal-on-scroll">Less is more work</p>
+        <div class="about-content">
+          <div class="image reveal-on-scroll" data-delay="0">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="imgs/about.jpg"
+              alt="About Leon Agency"
+            />
+          </div>
+          <div class="text reveal-on-scroll" data-delay="150">
+            <p>
+              We are a passionate collective of digital creators, engineers, and
+              strategists. We craft thoughtful digital products that blend
+              minimalist elegance with uncompromising performance.
+            </p>
+            <hr />
+            <p>
+              Through disciplined design systems, agile execution, and deep
+              technical mastery, we transform ambitious visions into memorable
+              digital realities that scale with your growth.
+            </p>
+
+            <!-- Interactive Skill Progress Bars -->
+            <div class="skills-progress">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>UI/UX Architecture</span>
+                  <span class="skill-percent" data-target="95">0%</span>
                 </div>
-                <div class="text reveal-on-scroll" data-delay="150">
-                    <p>
-                        We are a passionate collective of digital creators, engineers, and strategists.
-                        We craft thoughtful digital products that blend minimalist elegance with uncompromising performance.
-                    </p>
-                    <hr />
-                    <p>
-                        Through disciplined design systems, agile execution, and deep technical mastery,
-                        we transform ambitious visions into memorable digital realities that scale with your growth.
-                    </p>
-                    
-                    <!-- Interactive Skill Progress Bars -->
-                    <div class="skills-progress">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>UI/UX Architecture</span>
-                                <span class="skill-percent" data-target="95">0%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-bar" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Web Engineering & Performance</span>
-                                <span class="skill-percent" data-target="90">0%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-bar" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Creative Branding & Identity</span>
-                                <span class="skill-percent" data-target="85">0%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-bar" data-width="85%"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-width="95%"></div>
                 </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Web Engineering & Performance</span>
+                  <span class="skill-percent" data-target="90">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-width="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Creative Branding & Identity</span>
+                  <span class="skill-percent" data-target="85">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-width="85%"></div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End About -->
 
     <!-- Start Stats Section -->
     <section class="stats" id="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-box reveal-on-scroll" data-delay="0">
-                    <i class="fas fa-project-diagram"></i>
-                    <div class="number" data-goal="250">0</div>
-                    <p>Completed Projects</p>
-                </div>
-                <div class="stat-box reveal-on-scroll" data-delay="100">
-                    <i class="fas fa-smile-beam"></i>
-                    <div class="number" data-goal="180">0</div>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="stat-box reveal-on-scroll" data-delay="200">
-                    <i class="fas fa-award"></i>
-                    <div class="number" data-goal="35">0</div>
-                    <p>Design Awards</p>
-                </div>
-                <div class="stat-box reveal-on-scroll" data-delay="300">
-                    <i class="fas fa-coffee"></i>
-                    <div class="number" data-goal="1250">0</div>
-                    <p>Cups of Coffee</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-box reveal-on-scroll" data-delay="0">
+            <i class="fas fa-project-diagram"></i>
+            <div class="number" data-goal="250">0</div>
+            <p>Completed Projects</p>
+          </div>
+          <div class="stat-box reveal-on-scroll" data-delay="100">
+            <i class="fas fa-smile-beam"></i>
+            <div class="number" data-goal="180">0</div>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-box reveal-on-scroll" data-delay="200">
+            <i class="fas fa-award"></i>
+            <div class="number" data-goal="35">0</div>
+            <p>Design Awards</p>
+          </div>
+          <div class="stat-box reveal-on-scroll" data-delay="300">
+            <i class="fas fa-coffee"></i>
+            <div class="number" data-goal="1250">0</div>
+            <p>Cups of Coffee</p>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Stats Section -->
 
     <!-- Start Contact -->
     <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="special-heading reveal-on-scroll">Contact</h2>
-            <p class="special-subheading reveal-on-scroll">We are born to create</p>
-            <div class="info reveal-on-scroll">
-                <p class="label">Feel free to drop us a line at:</p>
-                <a href="mailto:leonagency@mail.com?subject=Contact" class="link">leonagency@mail.com</a>
-                <div class="social">
-                    <span>Find Us On Social Networks</span>
-                    <div class="social-icons">
-                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="special-heading reveal-on-scroll">Contact</h2>
+        <p class="special-subheading reveal-on-scroll">We are born to create</p>
+        <div class="info reveal-on-scroll">
+          <p class="label">Feel free to drop us a line at:</p>
+          <a href="mailto:leonagency@mail.com?subject=Contact" class="link"
+            >leonagency@mail.com</a
+          >
+          <div class="social">
+            <span>Find Us On Social Networks</span>
+            <div class="social-icons">
+              <a href="#" aria-label="YouTube" class="social-link"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" aria-label="Facebook" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter" class="social-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn" class="social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- End Contact -->
 
     <!-- Start Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 <span>Leon</span>. All Rights Reserved. Crafted with Passion & Precision.</p>
-        </div>
+      <div class="container">
+        <p>
+          &copy; 2026 <span>Leon</span>. All Rights Reserved. Crafted with
+          Passion & Precision.
+        </p>
+      </div>
     </footer>
     <!-- End Footer -->
 
     <!-- Lightbox Modal for Portfolio -->
-    <div class="lightbox-modal" id="portfolio-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-        <div class="lightbox-backdrop"></div>
-        <div class="lightbox-content">
-            <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close Preview">&times;</button>
-            <img src="" alt="" id="lightbox-image" class="lightbox-img" />
-            <div class="lightbox-caption" id="lightbox-caption">Project Name</div>
-        </div>
+    <div
+      class="lightbox-modal"
+      id="portfolio-lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="lightbox-backdrop"></div>
+      <div class="lightbox-content">
+        <button
+          class="lightbox-close"
+          id="lightbox-close-btn"
+          aria-label="Close Preview"
+        >
+          &times;
+        </button>
+        <img src="" alt="" id="lightbox-image" class="lightbox-img" />
+        <div class="lightbox-caption" id="lightbox-caption">Project Name</div>
+      </div>
     </div>
-    
+
     <!-- Scroll to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Scroll to top of page">
-        <i class="fas fa-chevron-up"></i>
+    <button
+      class="back-to-top"
+      id="back-to-top"
+      aria-label="Scroll to top of page"
+    >
+      <i class="fas fa-chevron-up"></i>
     </button>
-
-</body>
-
+  </body>
 </html>
